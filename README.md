@@ -1,8 +1,9 @@
 # Cloudflare DNS Updater
 
-Shell script that will update a Cloudflare record to the public IP of the server the script is running on every 5 minutes (only of the IP has changed), using a systemd timer.
+Shell script that will dynamically update a [Cloudflare](https://www.cloudflare.com/) DNS record to the server's public IP (using the https://checkip.amazonaws.com/ API) every 5 minutes, using a systemd timer.
 
 ## Installation (root or installed sudo required)
 ```
-git clone https://github.com/moqmar/cf-dns-update.git /tmp/cf-dns-update && cd /tmp/cf-dns-update && source install
+git clone https://github.com/moqmar/cf-dns-update.git /tmp/cf-dns-update && cd /tmp/cf-dns-update
+source install
 ```
